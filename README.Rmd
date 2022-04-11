@@ -41,7 +41,7 @@ resources.
 
 ## Syllabus
 
-### Files and directories
+### Part 1: Working with files and directories
 
 Setup:
 

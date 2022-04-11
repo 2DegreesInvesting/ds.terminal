@@ -31,7 +31,7 @@ developers and analysts at 2DII and beyond.
 
 ## Syllabus
 
-### Files and directories
+### Part 1: Working with files and directories
 
 Setup:
 
