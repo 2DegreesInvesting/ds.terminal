@@ -74,15 +74,25 @@ Shell Scripts:
 
 -   How can I save and re-use commands?
 
-## Setup: Get yourself a terminal
+## Setup
 
-You may access the terminal in many ways:
+You may get a bash terminal and the lesson data in a number of ways:
 
 -   Follow the lesson’s
     [setup](https://swcarpentry.github.io/shell-novice/setup.html).
 
--   Use the terminal tab in RStudio locally or [in the
-    cloud](https://rstudio.cloud/).
+-   Use the terminal in [RStudio cloud](https://rstudio.cloud/). You may
+    download the lesson data into the Desktop folder in R with:
+
+``` r
+# install.packages("usethis")
+library(usethis)
+
+use_course(
+  url = "https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip", 
+  destdir = "~/Desktop"
+)
+```
 
 -   Use the docker image `maurolepore/terminal` (includes the lesson’s
     data) with:
