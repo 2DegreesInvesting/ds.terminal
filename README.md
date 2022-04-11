@@ -74,6 +74,23 @@ Shell Scripts:
 
 -   How can I save and re-use commands?
 
+## Setup: Get yourself a terminal
+
+You may access the terminal in many ways:
+
+-   Follow the lesson’s
+    [setup](https://swcarpentry.github.io/shell-novice/setup.html).
+
+-   Use the terminal tab in RStudio locally or [in the
+    cloud](https://rstudio.cloud/).
+
+-   Use the docker image `maurolepore/terminal` (includes the lesson’s
+    data) with:
+
+``` bash
+docker run --rm -ti maurolepore/terminal
+```
+
 ## Resources
 
 -   YouTube [playlist](https://bit.ly/ds-incubator-videos).
@@ -85,20 +102,3 @@ Shell Scripts:
     [The Carpentries](https://carpentries.org/).
 -   Materials
     ([ds.terminal/releases](https://github.com/2DegreesInvesting/ds.terminal/releases)).
-
-## Compuing environment
-
-You may access the terminal in many ways:
-
--   Setup a terminal following the [lesson’s
-    instructions](https://swcarpentry.github.io/shell-novice/setup.html).
-
--   Use the terminal tab in RStudio locally or [in the
-    cloud](https://rstudio.cloud/).
-
--   Use the docker image maurolepore/terminal (includes the lesson’s
-    data) with:
-
-``` bash
-docker run --rm -ti maurolepore/terminal
-```
