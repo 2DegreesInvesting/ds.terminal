@@ -93,3 +93,18 @@ project.
 * [The Unix shell](https://swcarpentry.github.io/shell-novice/) by [The Carpentries](https://carpentries.org/).
 * Materials
 ([ds.terminal/releases](https://github.com/2DegreesInvesting/ds.terminal/releases)).
+
+## Compuing environment
+
+You may access the terminal in many ways:
+
+* Setup a terminal following the [lesson's instructions](https://swcarpentry.github.io/shell-novice/setup.html).
+
+* Use the terminal tab in RStudio locally or [in the cloud](https://rstudio.cloud/).
+
+* Use the docker image maurolepore/terminal (includes the lesson's data) with:
+
+```bash
+docker run --rm -ti maurolepore/terminal
+```
+
