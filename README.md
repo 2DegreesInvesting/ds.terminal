@@ -6,11 +6,9 @@ At the end of this series you will be able to do things like these:
 
 -   navigate to a file/directory
 -   create a file/directory
--   check the length of a file
--   chain commands together
--   retrieve a set of files
+-   compose multiple commands in a single pipeline
 -   iterate over files
--   run a shell script containing a pipeline
+-   write a single command to do many things at once
 
 ## Who is the audience?
 
