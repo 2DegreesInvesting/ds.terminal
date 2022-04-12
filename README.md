@@ -36,7 +36,9 @@ developers and analysts at 2DII and beyond.
 This meetup helps you understand what is the terminal, and why you might
 want to use it. It overviews the entire series.
 
-### Part 1:
+### Next
+
+Part 1:
 
 -   Navigate your files system with `cd and ls`.
 -   Tweak the shell’s prompt with `PS1="\w$ "`.
@@ -47,12 +49,12 @@ want to use it. It overviews the entire series.
 -   Compose commands, sort, and redirect stdout:
     `wc * -l | sort -n > out.txt`
 
-### Part 2:
+Part 2:
 
 -   Find things in files: `grep "the" writing/haiku.txt`
 -   Find files: `find . -name "*.txt"`
 
-### Part 3:
+Part 3:
 
 -   Iterate: `find . -name "*.txt" | xargs wc -l`
 -   Script: `alias rm="rm -i"`
