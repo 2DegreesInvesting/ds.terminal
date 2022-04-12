@@ -43,29 +43,20 @@ resources.
 
 ### Part 1: Working with files and directories
 
-Setup:
+Objectives:
 
-* How can I access a Unix shell and the lesson materials?
+* Setup a terminal and the lesson data.
+* Understand what is the terminal and why you may use it.
+* Learn to move around your system.
+* See the files and directories you have. 
 
-Introducing the Shell:
+XXXXXXX* How can I specify the location of a file or directory on my computer?
 
-* What is a command shell and why would I use one?
+* Create, copy, and delete files and directories.
+* Edit files.
 
-Navigating Files and Directories:
-
-* How can I move around on my computer? 
-* How can I see what files and directories I have? 
-* How can I specify the location of a file or directory on my computer?
-
-Working With Files and Directories:
-
-* How can I create, copy, and delete files and directories?
-* How can I edit files?
-
-Finding Things:
-
-* How can I find files? 
-* How can I find things in files?
+* Find files.
+* Find things inside files.
 
 ### Part 2: Combining and repeating commands
 
