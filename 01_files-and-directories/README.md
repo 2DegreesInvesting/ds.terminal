@@ -13,7 +13,7 @@
 -   They scale up much better than GUIs.
 -   It a common way to interact with cloud computing systems.
 
-### Look around
+### Look and move around
 
 ``` bash
 # Print working directory
@@ -22,7 +22,7 @@ pwd
 # List files and directories under the current working directory
 ls
 
-# Modify the list
+# Modify the output with flags. You may combine multiple flags
 ls --all
 ls -a
 
@@ -34,14 +34,59 @@ ls -altrF
 ls --help
 ```
 
-Change directory to the home directory and explore your Desktop
+Change to your home directory and explore it. This helps:
+
+-   Use autocomplete with Tab.
+-   Clear the terminal with clear (or ctrl + L).
+-   Reuse commands with Up/Down.
 
 ``` bash
 cd ~
+```
 
-# Explore the lesson data. 
-# * Use autocomplete with Tab
-# * Clasify contents with -F
-# * Clearn the terminal with clear (or ctrl + L)
-# * Reuse commands with Up/Down
+-   Explore lesson’s data under \~/Desktop recursively.
+
+``` bash
+ls -R
+```
+
+Explore the directories `.` and `..`.
+
+``` bash
+ls -a
+ls .
+ls ..
+```
+
+Explore one linking/linked directory.
+
+``` bash
+ls -l
+ls R
+ls /cloud/lib
+```
+
+These three commands return the same. Which one is wold you say is:
+
+-   default?
+-   relative?
+-   special?
+-   absolute?
+
+``` bash
+ls
+ls .
+ls ~
+ls /home/rstudio-user
+```
+
+These two commands return something different expect at `/`. Why?
+
+``` bash
+ls .
+ls ..
+
+cd /
+ls .
+ls ..
 ```

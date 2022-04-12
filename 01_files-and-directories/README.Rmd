@@ -50,7 +50,7 @@ Change to your home directory and explore it. This helps:
 * Clear the terminal with clear (or ctrl + L).
 * Reuse commands with Up/Down.
 
-```{r}
+```bash
 cd ~
 ```
 
