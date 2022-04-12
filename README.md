@@ -4,11 +4,13 @@ your terminal.
 
 At the end of this series you will be able to do things like these:
 
--   navigate to a file/directory
--   create a file/directory
--   compose multiple commands in a single pipeline
--   iterate over files
--   write a single command to do many things at once
+-   Navigate your file system.
+-   Modify your file system.
+-   Perform complex actions by composing multiple simple commands.
+-   Find files, and find patterns inside files.
+-   Do one thing over multiple files.
+-   Create your own commands to do many things at once.
+-   Customize your terminal to make it nicer and safer.
 
 ## Who is the audience?
 
