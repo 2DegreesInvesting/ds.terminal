@@ -41,38 +41,29 @@ resources.
 
 ## Syllabus
 
-### Part 1: Working with files and directories
+### Overview
 
-Objectives:
+This meetup helps you understand what is the terminal, and why you might want
+to use it. It overviews the entire series.
 
-* Setup a terminal and the lesson data.
-* Understand what is the terminal and why you may use it.
-* Learn to move around your system.
-* See the files and directories you have. 
+### Part 1:
 
-XXXXXXX* How can I specify the location of a file or directory on my computer?
+* Navigate your files system with `cd and ls`.
+* Tweak the shell's prompt with `PS1="\w$ "`.
+* Use `ls` with multiple flags combined, e.g. `ls -lshSF`.
+* Create directories with `mkdir`.
+* Create/copy/move/edit/remove files: `touch`, `cp`, `mv`, `echo/vi/nano`, `rm -i`
+* Compose commands, sort, and redirect stdout: `wc * -l | sort -n > out.txt`
 
-* Create, copy, and delete files and directories.
-* Edit files.
+### Part 2:
 
-* Find files.
-* Find things inside files.
+* Find things in files: `grep "the" writing/haiku.txt`
+* Find files: `find . -name "*.txt"`
 
-### Part 2: Combining and repeating commands
+### Part 3:
 
-Pipes and Filters:
-
-* How can I combine existing commands to do new things?
-
-Loops:
-
-* How can I perform the same actions on many different files?
-
-### Part 3: Reusing commands
-
-Shell Scripts:
-
-* How can I save and re-use commands?
+* Iterate: `find . -name "*.txt" | xargs wc -l`
+* Script: `alias rm="rm -i"`
 
 ## Setup
 

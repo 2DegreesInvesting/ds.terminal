@@ -31,48 +31,31 @@ developers and analysts at 2DII and beyond.
 
 ## Syllabus
 
-### Part 1: Working with files and directories
+### Overview
 
-Setup:
+This meetup helps you understand what is the terminal, and why you might
+want to use it. It overviews the entire series.
 
--   How can I access a Unix shell and the lesson materials?
+### Part 1:
 
-Introducing the Shell:
+-   Navigate your files system with `cd and ls`.
+-   Tweak the shell’s prompt with `PS1="\w$ "`.
+-   Use `ls` with multiple flags combined, e.g. `ls -lshSF`.
+-   Create directories with `mkdir`.
+-   Create/copy/move/edit/remove files: `touch`, `cp`, `mv`,
+    `echo/vi/nano`, `rm -i`
+-   Compose commands, sort, and redirect stdout:
+    `wc * -l | sort -n > out.txt`
 
--   What is a command shell and why would I use one?
+### Part 2:
 
-Navigating Files and Directories:
+-   Find things in files: `grep "the" writing/haiku.txt`
+-   Find files: `find . -name "*.txt"`
 
--   How can I move around on my computer?
--   How can I see what files and directories I have?
--   How can I specify the location of a file or directory on my
-    computer?
+### Part 3:
 
-Working With Files and Directories:
-
--   How can I create, copy, and delete files and directories?
--   How can I edit files?
-
-Finding Things:
-
--   How can I find files?
--   How can I find things in files?
-
-### Part 2: Combining and repeating commands
-
-Pipes and Filters:
-
--   How can I combine existing commands to do new things?
-
-Loops:
-
--   How can I perform the same actions on many different files?
-
-### Part 3: Reusing commands
-
-Shell Scripts:
-
--   How can I save and re-use commands?
+-   Iterate: `find . -name "*.txt" | xargs wc -l`
+-   Script: `alias rm="rm -i"`
 
 ## Setup
 
