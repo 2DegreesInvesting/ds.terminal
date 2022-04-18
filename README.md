@@ -45,6 +45,7 @@ Objectives:
 
 -   Understand what is the shell.
 -   Start a bash shell.
+-   Setup the lesson materials.
 -   Basic shell commands.
 
 ### Next
