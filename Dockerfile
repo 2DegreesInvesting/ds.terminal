@@ -11,10 +11,10 @@ RUN mkdir $HOME \
           $HOME/Picutures \
           $HOME/Public \
    # Show common configurations
-   && cp /root/.bashrc $HOME/.bashrc \
+   # && cp /root/.bashrc $HOME/.bashrc \
    # Imitate the shell prompt shown in the lesson
    && cp /root/.profile $HOME/.profile \
-   && echo "PS1='$ '" >> $HOME/.bashrc \
+   && echo "PS1='\w$ '" >> $HOME/.bashrc \
    # Show a multi-user system
    && useradd docker \
    && chown docker:docker $HOME
