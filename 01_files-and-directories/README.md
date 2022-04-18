@@ -1,17 +1,51 @@
 
 # Part 1
 
+### [The shell](https://happygitwithr.com/shell.html)
+
+-   What is the shell?
+
+-   How to access a shell?
+
+### Basic shell commands
+
+``` bash
+pwd
+
+ls -a
+
+cd foo
+cd ..
+cd ~
+cd /absolute/path
+cd ../relative/path
+cd ~/expandable/path
+```
+
+-   Extensions may confuse you
+
+Handy ways to write paths:
+
+-   Windows uses  
+-   Drag-and-drop insertes path
+-   Autocomplete with tab
+
+Navigate the history:
+
+-   Repeat previous commands with up/down
+-   Search previous commands with ctrl + r
+
+Help
+
+### Help
+
+-   `man command`, `command --help`, and online help.
+
 ### Setup
 
 -   Overview different ways to
     [setup](https://github.com/2DegreesInvesting/ds.terminal#setup) a
     terminal and data.
-
-### What is the terminal and why use it?
-
--   It’s one way to interact with a computer.
--   They scale up much better than GUIs.
--   It a common way to interact with cloud computing systems.
 
 ### Look and move around
 
