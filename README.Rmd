@@ -64,37 +64,8 @@ Objectives:
 
 ### Next
 
-Part 2:
-
-* Find things in files: `grep "the" writing/haiku.txt`
-* Find files: `find . -name "*.txt"`
-
-Part 3:
-
-* Iterate: `find . -name "*.txt" | xargs wc -l`
-* Script: `alias rm="rm -i"`
-
-## Setup
-
-* Option 1: You can get a bash terminal following Appendix A of Happy Git with
-R: [The shell](https://happygitwithr.com/shell.html#shell). Then download the
-[example
-data]("https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip")
-into your Desktop/ folder, e.g. in R with:
-
-```r
-# install.packages("usethis")
-
-url <- "https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip"
-usethis::use_course(url, destdir = "~/Desktop")
-```
-
-* Option 2: Use the docker image `maurolepore/terminal` including the example
-data with:
-
-```bash
-docker run --rm -ti maurolepore/terminal
-```
+* Find things.
+* Iterate and reuse.
 
 ## Resources
 

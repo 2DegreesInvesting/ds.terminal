@@ -4,9 +4,9 @@
 ### [What is the shell?](https://happygitwithr.com/shell.html#what-is-the-shell)
 
 -   A program … to run other programs.
--   It is very fast, concise, and ubuquitous.
+-   It is very fast, concise, and ubiquitous.
 -   The most common shell is `bash`.
--   Pseudo-synonyms are “terminal”, “command line”, and “console”.
+-   Pseudo-synonyms: terminal, command line, and console.
 
 ### [Starting the shell](https://happygitwithr.com/shell.html#starting-the-shell)
 
@@ -22,9 +22,14 @@
 
 -   Outside Rstudio:
 
-    -   MacOS: Terminal (as admin with `sudo`)
-    -   Windows: 1) Install Git, 2) Git Bash (as admini with
-        right-click).
+    -   MacOS: Start “Terminal”.
+    -   Windows: [Install
+        Git](https://happygitwithr.com/install-git.html), then start
+        “Git Bash”.
+
+### Setup
+
+TODO
 
 ### Basic shell commands
 
@@ -33,23 +38,15 @@ pwd
 
 ls -a
 
-cd foo
+cd shell-lesson-data
 cd ..
 cd ~
-cd /absolute/path
-cd ../relative/path
-cd ~/expandable/path
 ```
 
--   Extensions may confuse you
-
-Handy ways to write paths:
+Writing paths:
 
 -   Windows uses  
--   Drag-and-drop insertes path
--   Autocomplete with tab
-
-Navigate the history:
-
+-   Drag-and-drop to insert a path
+-   Press tab to auto-complete a path
 -   Repeat previous commands with up/down
 -   Search previous commands with ctrl + r
