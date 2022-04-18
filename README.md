@@ -36,7 +36,7 @@ developers and analysts at 2DII and beyond.
 This meetup helps you understand what is the terminal, and why you might
 want to use it. It overviews the entire series.
 
-### Part 1:
+### Part 1
 
 This chapter is based on Appendix A of Happy Git with R: [The
 shell](https://happygitwithr.com/shell.html).
@@ -44,9 +44,19 @@ shell](https://happygitwithr.com/shell.html).
 Objectives:
 
 -   Understand what is the shell.
+
 -   Start a bash shell.
+
 -   Setup the lesson materials.
--   Basic shell commands.
+
+-   Navigate your file system.
+
+-   Modify your file system: Create/copy/move, and remove (!)
+    files/directories.
+
+-   Compose commands, sort, and redirect results.
+
+-   Edit text files.
 
 ### Next
 
@@ -62,26 +72,21 @@ Part 3:
 
 ## Setup
 
-You may get a bash terminal and the lesson data in a number of ways:
-
--   Follow the lesson’s
-    [setup](https://swcarpentry.github.io/shell-novice/setup.html).
-
--   Use the terminal in [RStudio cloud](https://rstudio.cloud/). You may
-    download the lesson data into the Desktop folder in R with:
+-   Option 1: You can get a bash terminal following Appendix A of Happy
+    Git with R: [The shell](https://happygitwithr.com/shell.html#shell).
+    Then download the [example
+    data](%22https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip%22)
+    into your Desktop/ folder, e.g. in R with:
 
 ``` r
 # install.packages("usethis")
-library(usethis)
 
-use_course(
-  url = "https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip", 
-  destdir = "~/Desktop"
-)
+url <- "https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip"
+usethis::use_course(url, destdir = "~/Desktop")
 ```
 
--   Use the docker image `maurolepore/terminal` (includes the lesson’s
-    data) with:
+-   Option 2: Use the docker image `maurolepore/terminal` including the
+    example data with:
 
 ``` bash
 docker run --rm -ti maurolepore/terminal
