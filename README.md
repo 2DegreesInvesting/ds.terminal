@@ -36,18 +36,18 @@ developers and analysts at 2DII and beyond.
 This meetup helps you understand what is the terminal, and why you might
 want to use it. It overviews the entire series.
 
+### Part 1:
+
+This chapter is based on Appendix A of Happy Git with R: [The
+shell](https://happygitwithr.com/shell.html).
+
+Objectives:
+
+-   Understand what is the shell.
+-   Start a bash shell.
+-   Basic shell commands.
+
 ### Next
-
-Part 1:
-
--   Navigate your files system with `cd and ls`.
--   Tweak the shell’s prompt with `PS1="\w$ "`.
--   Use `ls` with multiple flags combined, e.g. `ls -lshSF`.
--   Create directories with `mkdir`.
--   Create/copy/move/edit/remove files: `touch`, `cp`, `mv`,
-    `echo/vi/nano`, `rm -i`
--   Compose commands, sort, and redirect stdout:
-    `wc * -l | sort -n > out.txt`
 
 Part 2:
 

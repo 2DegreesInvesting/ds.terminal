@@ -11,12 +11,29 @@ knitr::opts_chunk$set(
 
 # Part 1
 
+### [What is the shell?](https://happygitwithr.com/shell.html#what-is-the-shell)
 
-###  [The shell](https://happygitwithr.com/shell.html)
+* A program ... to run other programs.
+* It is very fast, concise, and ubuquitous.
+* The most common shell is `bash`.
+* Pseudo-synonyms are "terminal", "command line", and "console".
 
-* What is the shell?
+### [Starting the shell](https://happygitwithr.com/shell.html#starting-the-shell)
 
-* How to access a shell?
+* Within Rstudio:
+
+    * Tools > Shell ...
+    * Tools > Terminal
+
+* Check terminal in RStudio:
+
+    * Tools > Global options > Terminal (bash)
+    * `echo $SHELL`
+
+* Outside Rstudio: 
+
+    * MacOS: Terminal (as admin with `sudo`)
+    * Windows: 1) Install Git, 2) Git Bash (as admini with right-click).
 
 ### Basic shell commands
 
@@ -45,93 +62,3 @@ Navigate the history:
 
 * Repeat previous commands with up/down
 * Search previous commands with ctrl + r
-
-Help
-
-### Help
-
-* `man command`, `command --help`, and online help.
-
-### Setup
-
-* Overview different ways to
-[setup](https://github.com/2DegreesInvesting/ds.terminal#setup) a terminal and
-data.
-
-### Look and move around
-
-```bash
-# Print working directory
-pwd
-
-# List files and directories under the current working directory
-ls
-
-# Modify the output with flags. You may combine multiple flags
-ls --all
-ls -a
-
-ls -al
-ls -alt
-ls -altr
-ls -altrF
-
-ls --help
-```
-
-Change to your home directory and explore it. This helps:
-
-* Use autocomplete with Tab.
-* Clear the terminal with clear (or ctrl + L).
-* Reuse commands with Up/Down.
-
-```bash
-cd ~
-```
-
-* Explore lesson's data under ~/Desktop recursively.
-
-```bash
-ls -R
-```
-
-Explore the directories `.` and `..`.
-
-```bash 
-ls -a
-ls .
-ls ..
-```
-
-Explore one linking/linked directory.
-
-```bash
-ls -l
-ls R
-ls /cloud/lib
-```
-
-These three commands return the same. Which one is wold you say is:
-
-* default?
-* relative?
-* special?
-* absolute?
-
-```bash
-ls
-ls .
-ls ~
-ls /home/rstudio-user
-```
-
-These two commands return something different expect at `/`. Why?
-
-```bash
-ls .
-ls ..
-
-cd /
-ls .
-ls ..
-```
