@@ -38,27 +38,24 @@ knitr::opts_chunk$set(
 
 ### Setup
 
-## Setup
-
-* Option 1: Start a terminal and download the [example
+Start a terminal and download the [example
 data]("https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip") into your Desktop folder.
 
-* Options 2: If you use Docker, you may use the image `maurolepore/terminal`
-(including the example data):
-
-```bash
-docker run --rm -ti maurolepore/terminal
-```
+Or install `docker` and `docker-compose` then run `docker-compose up`.
 
 ### Basic shell commands
 
 ```bash
 pwd
 
+ls
+ls --help
 ls -a
+ls -alt
 
-cd shell-lesson-data
+cd Desktop/shell-lesson-data
 cd ..
+cd -
 cd ~
 ```
 

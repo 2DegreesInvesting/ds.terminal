@@ -29,17 +29,25 @@
 
 ### Setup
 
-TODO
+Start a terminal and download the [example
+data](%22https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip%22)
+into your Desktop folder.
+
+Or install `docker` and `docker-compose` then run `docker-compose up`.
 
 ### Basic shell commands
 
 ``` bash
 pwd
 
+ls
+ls --help
 ls -a
+ls -alt
 
-cd shell-lesson-data
+cd Desktop/shell-lesson-data
 cd ..
+cd -
 cd ~
 ```
 
