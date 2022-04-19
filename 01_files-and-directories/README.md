@@ -35,7 +35,7 @@ into your Desktop folder.
 
 Or install `docker` and `docker-compose` then run `docker-compose up`.
 
-### Basic shell commands
+### Navigate your file system
 
 ``` bash
 pwd
@@ -51,10 +51,14 @@ cd -
 cd ~
 ```
 
-Writing paths:
+### Writing paths
 
 -   Windows uses  
 -   Drag-and-drop to insert a path
 -   Press tab to auto-complete a path
 -   Repeat previous commands with up/down
 -   Search previous commands with ctrl + r
+
+### Modify your file system
+
+Next.

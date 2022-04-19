@@ -48,8 +48,12 @@ to use it. It overviews the entire series.
 
 ### Part 1
 
-This chapter is based on Appendix A of Happy Git with R: [The
+This chapter is based on two resources:
+
+1. Appendix A of Happy Git with R -- [The
 shell](https://happygitwithr.com/shell.html).
+
+2. [The Unix shell](https://swcarpentry.github.io/shell-novice/) by [The Carpentries](https://carpentries.org/).
 
 Objectives:
 
@@ -62,10 +66,12 @@ Objectives:
 * Compose commands, sort, and redirect results.
 * Edit text files.
 
-### Next
+### Next (tentative)
 
 * Find things.
 * Iterate and reuse.
+* Users and privileges.
+* Dotfiles.
 
 ## Resources
 

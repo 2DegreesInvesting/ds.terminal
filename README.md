@@ -38,8 +38,13 @@ want to use it. It overviews the entire series.
 
 ### Part 1
 
-This chapter is based on Appendix A of Happy Git with R: [The
-shell](https://happygitwithr.com/shell.html).
+This chapter is based on two resources:
+
+1.  Appendix A of Happy Git with R – [The
+    shell](https://happygitwithr.com/shell.html).
+
+2.  [The Unix shell](https://swcarpentry.github.io/shell-novice/) by
+    [The Carpentries](https://carpentries.org/).
 
 Objectives:
 
@@ -58,39 +63,12 @@ Objectives:
 
 -   Edit text files.
 
-### Next
+### Next (tentative)
 
-Part 2:
-
--   Find things in files: `grep "the" writing/haiku.txt`
--   Find files: `find . -name "*.txt"`
-
-Part 3:
-
--   Iterate: `find . -name "*.txt" | xargs wc -l`
--   Script: `alias rm="rm -i"`
-
-## Setup
-
--   Option 1: You can get a bash terminal following Appendix A of Happy
-    Git with R: [The shell](https://happygitwithr.com/shell.html#shell).
-    Then download the [example
-    data](%22https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip%22)
-    into your Desktop/ folder, e.g. in R with:
-
-``` r
-# install.packages("usethis")
-
-url <- "https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip"
-usethis::use_course(url, destdir = "~/Desktop")
-```
-
--   Option 2: Use the docker image `maurolepore/terminal` including the
-    example data with:
-
-``` bash
-docker run --rm -ti maurolepore/terminal
-```
+-   Find things.
+-   Iterate and reuse.
+-   Users and privileges.
+-   Dotfiles.
 
 ## Resources
 
