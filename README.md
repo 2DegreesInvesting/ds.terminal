@@ -49,26 +49,24 @@ This chapter is based on two resources:
 Objectives:
 
 -   Understand what is the shell.
-
 -   Start a bash shell.
-
 -   Setup the lesson materials.
-
 -   Navigate your file system.
-
--   Modify your file system: Create/copy/move, and remove (!)
-    files/directories.
-
--   Compose commands, sort, and redirect results.
-
--   Edit text files.
+-   Modify your file system:
+    -   Create/copy/move, and remove (!) files/directories.
+    -   Edit text files.
+    -   Redirect output.
+    -   Dotfiles.
+    -   Compose commands.
+-   Write your own commands with `alias`.
 
 ### Next (tentative)
 
+-   Use case: Setup a “home” project on RStudio cloud
 -   Find things.
--   Iterate and reuse.
+-   Iterate.
 -   Users and privileges.
--   Dotfiles.
+-   Managing dotfiles.
 
 ## Resources
 

@@ -2,7 +2,7 @@ version: "3.8"
 services:
   rstudio:
     build: .
-    image: maurolepore/ds_terminal:1
+    image: maurolepore/ds_terminal:2
     ports:
       - 8787:8787
     environment:
