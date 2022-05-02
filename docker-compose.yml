@@ -10,5 +10,5 @@ services:
     - ROOT=true
     volumes:
       - .:/home/rstudio/projects/ds.terminal
-      - ~/tmp:/home/rstudio
+      - ~/tmp/docker:/home/rstudio
 
