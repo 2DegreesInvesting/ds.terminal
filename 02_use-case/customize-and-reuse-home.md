@@ -43,50 +43,33 @@ alias R='R --no-save --no-restore-data'
 ```bash
 mkdir dotfiles
 cp .gitconfig .bashrc .bash_aliases .profile dotfiles
-cd dotfiles
-git init
-git add .
-git commit -m "Add basic dotfiles"
+
+zip -r dotfiles.zip dotfiles
 ```
 
 ### Reuse dotfiles
 
-Test
+Nothing yet.
 
 ```bash
+ls -A
 alias
-git clone git@github.com:2DegreesInvesting/ds.terminal.git
 ```
 
 Reuse dotfiles
 
-```bash
-ls -A
 
-zip -r dotfiles.zip dotfiles
-# Upload
+```bash
 unzip dotfiles.zip
 cd dotfiles
 cp . ~
 
+cd ~
 ls -A
-
-bash
 ```
 
-Reuse secret ssh keys
-
-```bash
-# WARNING! This is secret information
-zip -r ssh.zip ~/.ssh
-# Upload
-unzip ssh.zip
-mv .ssh ~
-```
-
-Refresh and test
+Restart.
 
 ```bash
 alias
-git clone git@github.com:2DegreesInvesting/ds.terminal.git
 ```
