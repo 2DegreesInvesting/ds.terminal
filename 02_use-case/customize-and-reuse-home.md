@@ -62,7 +62,7 @@ Reuse dotfiles
 ```bash
 unzip dotfiles.zip
 cd dotfiles
-cp . ~
+cp -r . ~
 
 cd ~
 ls -A
