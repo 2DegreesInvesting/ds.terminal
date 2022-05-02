@@ -33,8 +33,8 @@ Aliases
 alias
 less .bashrc
 
+echo "alias rm='rm -i'" >> .bash_aliases
 vim .bash_aliases
-alias rm='rm -i'
 alias R='R --no-save --no-restore-data'
 ```
 
