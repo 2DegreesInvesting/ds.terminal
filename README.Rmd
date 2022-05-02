@@ -69,9 +69,13 @@ Objectives:
     * Compose commands.
 * Write your own commands with `alias`.
 
+### Use case: Customize and reuse your home
+
+This meetup presents a use case for the skills we've covered so far. You will
+customize and reuse your home directory.
+
 ### Next (tentative)
 
-* Use case: Setup a "home" project on RStudio cloud
 * Find things.
 * Iterate.
 * Users and privileges.

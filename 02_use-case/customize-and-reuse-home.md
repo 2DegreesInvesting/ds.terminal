@@ -51,11 +51,20 @@ git commit -m "Add basic dotfiles"
 
 ### Reuse dotfiles
 
+Test
+
+```bash
+alias
+git clone git@github.com:2DegreesInvesting/ds.terminal.git
+```
+
+Reuse dotfiles
+
 ```bash
 ls -A
 
 zip -r dotfiles.zip dotfiles
-# Upload to rstudio cloud
+# Upload
 unzip dotfiles.zip
 cd dotfiles
 cp . ~
@@ -63,4 +72,21 @@ cp . ~
 ls -A
 
 bash
+```
+
+Reuse secret ssh keys
+
+```bash
+# WARNING! This is secret information
+zip -r ssh.zip ~/.ssh
+# Upload
+unzip ssh.zip
+mv .ssh ~
+```
+
+Refresh and test
+
+```bash
+alias
+git clone git@github.com:2DegreesInvesting/ds.terminal.git
 ```
