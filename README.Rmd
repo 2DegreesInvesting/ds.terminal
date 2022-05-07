@@ -74,9 +74,27 @@ Objectives:
 This meetup presents a use case for the skills we've covered so far. You will
 customize and reuse your home directory.
 
+### Find things
+
+This meetup helps you find text in files and files themselves. It gives an an
+overview of the command `grep` and the so called
+[findutils](https://www.gnu.org/software/findutils/) -- `find`, `locate`,
+`updatedb`, and `xargs`. It's presented in the form of the following use cases:
+
+1. Find interesting arguments in a help file.
+2. Prune a directory.
+3. Build a launcher of RStudio projects.
+
+Objectives:
+
+* Find an argument of `ls` by piping the output of `--help` into `grep`.
+* `find` files then delete them by piping the output into `xargs rm`.
+* `find` files then delete them with the action `-delete`.
+* `locate` an RStudio project then launch it with `rstudio`.
+* Create an `alias` to launch any RStudio project quickly.
+
 ### Next (tentative)
 
-* Find things.
 * Iterate.
 * Users and privileges.
 * Managing dotfiles.
