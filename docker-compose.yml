@@ -9,4 +9,4 @@ services:
     - PASSWORD=123
     - ROOT=true
     volumes:
-      - .:/home/rstudio/projects/ds.terminal
+      - .:/home/rstudio/ds.terminal

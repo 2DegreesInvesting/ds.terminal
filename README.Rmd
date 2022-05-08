@@ -82,22 +82,24 @@ overview of the command `grep` and the so called
 `updatedb`, and `xargs`. It's presented in the form of the following use cases:
 
 1. Find interesting arguments in a help file.
-2. Prune a directory.
-3. Build a launcher of RStudio projects.
+2. Move RStudio projects from scattered locations to a single one.
+3. Prune your Trash and the /tmp directory.
 
 Objectives:
 
-* Find an argument of `ls` by piping the output of `--help` into `grep`.
-* `find` files then delete them by piping the output into `xargs rm`.
-* `find` files then delete them with the action `-delete`.
-* `locate` an RStudio project then launch it with `rstudio`.
-* Create an `alias` to launch any RStudio project quickly.
+* Find an argument of `mv` by piping the output of `--help` into `grep`.
+
+* `find` directories which name/path match a pattern (or not).
+
+* Move multiple directories at once with `xargs mv -t <DIRECTORY> ...`.
+
+* Delete directories with `xargs rm`, and with the `find` actions
+`-delete` and `exec rm -ri '{}' ';'`.
 
 ### Next (tentative)
 
-* Iterate.
 * Users and privileges.
-* Managing dotfiles.
+* Writing you own commands.
 
 ## Resources
 

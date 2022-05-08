@@ -1,3 +1,7 @@
 FROM rocker/verse
-COPY shell-lesson-data /home/rstudio/Desktop/shell-lesson-data
-RUN chown rstudio:rstudio -R /home/rstudio/Desktop/
+RUN mkdir /home/rstudio/Desktop /home/rstudio/Trash /home/rstudio/projects \
+    && Rscript -e "usethis::create_project('/home/rstudio/abc', TRUE)" \
+    && Rscript -e "usethis::create_project('/home/rstudio/Desktop/xyz', TRUE)" \
+    && Rscript -e "usethis::create_project('/home/rstudio/Trash/bad', TRUE)" \
+    && chown rstudio:rstudio -R /home/rstudio/
+
