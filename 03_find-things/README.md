@@ -13,10 +13,10 @@ Use grep to learn about some of the most useful arguments of `grep`
 grep --help | head
 
 vim PATTERNS
--i,
--n,
--f,
--v,
+i,
+n,
+f,
+v,
 
 grep --help | grep -f PATTERNS
 ```
@@ -24,41 +24,40 @@ grep --help | grep -f PATTERNS
 ### Move all useful RStudio projects to ~/rs
 
 ```bash
-mkdir ~/rs
+# Command [directory] [filters] [action]
+find
+find ~
+find ~ -name "*.Rproj"
+find ~ -name "*.Rproj" -not -path "*Trash*"
+find ~ -name "*.Rproj" -not -path "*Trash*" -print
+find ~ -name "*.Rproj" -not -path "*Trash*" -ls
+
 find ~ -name "*.Rproj" -not -path "*Trash*" | xargs dirname
-
-# Learn how to handle directories with `mv`
-mv --help | head
-mv --help | grep -ni "directory"
-
-# Search previous command with `Ctrl + r + "find"`
 find ~ -name "*.Rproj" -not -path "*Trash*" | xargs dirname | xargs mv -t rs
 ```
 
-### List and delete files/directories using more `find` filters (`-user`) and
-actions (`-ls`, `-delete`)
+### List and delete files/directories using the `find` actions `-delete` and `-exec`.
 
 Empty Trash.
 
 ```bash
 # List contents
-find ~/Trash -not -name "Trash" -ls
+find Trash -not -name "Trash" -ls
 
 # DANGEROUS!
-find ~/Trash -not -name "Trash" -delete
+find Trash -not -name "Trash" -delete
+
+mkdir Trash/a
+touch Trash/a/b.c
+
 # Similar but uses more resources
-find ~/Trash -not -name "Trash" | xargs rm -rf
-```
+find Trash -not -name "Trash" | xargs rm
 
-Remove your temporary files
+mkdir Trash/a
+touch Trash/a/b.c
 
-```bash
-tempfile
-
-find /tmp -ls
-
-# Safer: Ask for confirmation
-find /tmp -user rstudio -exec rm -ri {} \;
+# Similar but safer because `-i` asks you to confirm
+find Trash -not -name "Trash" -exec rm -i {} \;
 ```
 
 ### Resources
