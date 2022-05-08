@@ -24,14 +24,11 @@ grep --help | grep -f PATTERNS
 ### Move all useful RStudio projects to ~/rs
 
 ```bash
-# Command [directory] [filters] [action]
+# Command paths (/) [tests] action (-print)
 find
-find ~
-find ~ -name "*.Rproj"
-find ~ -name "*.Rproj" -not -path "*Trash*"
-find ~ -name "*.Rproj" -not -path "*Trash*" -print
-find ~ -name "*.Rproj" -not -path "*Trash*" -ls
+find . -ls
 
+find ~ -name "*.Rproj" -not -path "*Trash*"
 find ~ -name "*.Rproj" -not -path "*Trash*" | xargs dirname
 find ~ -name "*.Rproj" -not -path "*Trash*" | xargs dirname | xargs mv -t rs
 ```
