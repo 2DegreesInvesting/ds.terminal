@@ -83,7 +83,7 @@ Objectives:
 
 * Find interesting arguments in a help file.
 * Move RStudio projects from scattered locations to a single one.
-* Prune your Trash and the /tmp directory.
+* Prune your Trash.
 
 ### Next (tentative)
 

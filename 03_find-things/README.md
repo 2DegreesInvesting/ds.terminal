@@ -12,6 +12,8 @@ Use grep to learn about some of the most useful arguments of `grep`
 ```bash
 grep --help | head
 
+grep --help | grep -i "f,"
+
 vim PATTERNS
 i,
 n,
@@ -26,7 +28,7 @@ grep --help | grep -f PATTERNS
 ```bash
 # Command paths (/) [tests] action (-print)
 find
-find . -ls
+find ~ -ls
 
 find ~ -name "*.Rproj" -not -path "*Trash*"
 find ~ -name "*.Rproj" -not -path "*Trash*" | xargs dirname
@@ -47,19 +49,19 @@ find Trash -not -name "Trash" -delete
 mkdir Trash/a
 touch Trash/a/b.c
 
-# Similar but uses more resources
-find Trash -not -name "Trash" | xargs rm
+# DANGEROUS! Similar but uses more resources
+find Trash -not -name "Trash" | xargs rm -rf
 
 mkdir Trash/a
 touch Trash/a/b.c
 
-# Similar but safer because `-i` asks you to confirm
-find Trash -not -name "Trash" -exec rm -i {} \;
+# SAFER. `-i` asks you to confirm
+find Trash -not -name "Trash" -exec rm -ri {} \;
 ```
 
 ### Resources
 
 * `grep --help`.
-* [findutils](https://www.gnu.org/software/findutils/): `find`, `locate`,
-`updatedb`, `xargs`.
+* `find --help` and `xargs --help` or
+[findutils](https://www.gnu.org/software/findutils/).
 
