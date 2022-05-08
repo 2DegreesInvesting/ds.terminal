@@ -1,3 +1,10 @@
+### Environment
+
+```bash
+docker build -t tmp .
+docker run --rm -ti --user rstudio tmp bash
+```
+
 ### Find patterrns in text files with `grep`
 
 Use grep to learn about some of the most useful arguments of `grep`
