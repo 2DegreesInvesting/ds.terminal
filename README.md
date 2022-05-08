@@ -67,34 +67,19 @@ will customize and reuse your home directory.
 
 ### Find things
 
-This meetup helps you find text in files and files themselves. It gives
-an an overview of the command `grep` and the so called
-[findutils](https://www.gnu.org/software/findutils/) – `find`, `locate`,
-`updatedb`, and `xargs`. It’s presented in the form of the following use
-cases:
-
-1.  Find interesting arguments in a help file.
-2.  Move RStudio projects from scattered locations to a single one.
-3.  Prune your Trash and the /tmp directory.
+This meetup helps you find specific files and specific text in them.
+It’s covers some use cases for the commands `grep`, `find`, and `xargs`.
 
 Objectives:
 
--   Find an argument of `mv` by piping the output of `--help` into
-    `grep`.
-
--   `find` directories which name/path match a pattern (or not).
-
--   Move multiple directories at once with
-    `xargs mv -t <DIRECTORY> ...`.
-
--   Delete directories with `xargs rm`, and with the `find` actions
-    `-delete` and `exec rm -ri '{}' ';'`.
+-   Find interesting arguments in a help file.
+-   Move RStudio projects from scattered locations to a single one.
+-   Prune your Trash and the /tmp directory.
 
 ### Next (tentative)
 
--   Iterate.
 -   Users and privileges.
--   Managing dotfiles.
+-   Writing you own commands.
 
 ## Resources
 
