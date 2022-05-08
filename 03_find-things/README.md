@@ -53,8 +53,10 @@ find ~/Trash -not -name "Trash" | xargs rm -rf
 Remove your temporary files
 
 ```bash
+tempfile
+
 find /tmp -ls
-find /tmp -user rstudio -ls
+
 # Safer: Ask for confirmation
 find /tmp -user rstudio -exec rm -ri {} \;
 ```
