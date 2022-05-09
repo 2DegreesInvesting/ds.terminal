@@ -63,5 +63,5 @@ find Trash -not -name "Trash" -exec rm -ri {} \;
 
 * `grep --help`.
 * `find --help` and `xargs --help` or
-[findutils](https://www.gnu.org/software/findutils/).
+[findutils](https://www.gnu.org/software/findutils/manual/html_mono/find.html).
 
