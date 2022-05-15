@@ -1,98 +1,159 @@
-# Use case: Customize and reuse your home
+### Understanding users and privileges to create custom commands
 
-### Navigate and look around
+This meetup covers an overview of a multi-user system. It helps you understand
+users and privileges so you can use your account in a remote server and create
+your own commands. It's presented in the form of a use case: Creating a custom
+`greetme` program in a remote server.
 
-```bash
-pwd
-cd ~
+Objectives:
 
-# Get help
-ls --help
+* Understand that a single may have multiple users.
+* Understand the difference between the admin and user accounts.
+* Login to a remote server with your user name and password.
+* Change your user password with `passwd`.
+* Create a file in your home directory, and try it elsewhere.
+* Implement `greetme` as echo "Hello ""$USER".
+* Attempt to run it in different ways
+  - Make it executable with `chmod +x hi`
+  - Understand permissions to write, read, and execute by owner, group, and user.
+  - Run it as `bash hi` and `./hi`.
+  - Understand how to add `greetme` to your `$PATH`.
+  - Run it as `greetme`.
 
-# Show hidden files and directories
-ls -AF
-```
+### Use case: Create a custom `greetme` command in a shared computer
 
-### Customize my system
+Features:
 
-Git
+* Detects the user name from the enviornment variable `$USER`.
+* Prints "Hi <user name>", e.g. "Hi mauro".
 
-```bash
-# Tell Git who I am
-git config --gloal user.name "Mauro Lepore"
-git config --global user.email "maurolepore@gmail.com"
+### Details
 
-ls -A
-
-cat .gitconfig
-```
-
-Aliases
-
-```bash
-alias
-less .bashrc
-
-vim .bash_aliases
-alias rm='rm -i'
-alias R='R --no-save --no-restore-data'
-```
-
-### Save dotfiles
+Access a terminal in a multi-user system.
 
 ```bash
-mkdir dotfiles
-cp .gitconfig .bashrc .bash_aliases .profile dotfiles
-cd dotfiles
-git init
-git add .
-git commit -m "Add basic dotfiles"
+docker-compose up
 ```
 
-### Reuse dotfiles
+Orient
 
 ```bash
-ls -A
-
-zip -r dotfiles.zip dotfiles
-# Upload to rstudio cloud
-unzip dotfiles.zip
-cd dotfiles
-cp . ~
-
-ls -A
-
-bash
+echo $USER
+echo $HOME
 ```
 
-# Install software
-sudo apt-get update && sudo apt-get install nano
+`rstudio` is a super user (sudo) -- can act beyond the limts of /home/rstudio
 
-# Compose commands
+```bash
+# This is usually done by someone in the IT department (not your problem)
+adduser mauro
+sudo adduser mauro
+```
 
-# Basics of finding things and iterating
+Login as `mauro` and orient
 
-- grep
-- xargs (https://www.gnu.org/software/findutils/)
+```bash
+login mauro
+echo $USER
+echo $HOME
+```
 
-# Focused on developers
+`mauro` isn't a super user.
 
-- Installing software
+```bash
+adduser will-fail
+sudo adduser will-fail
+```
 
-- Finding things
-  - findutils: https://www.gnu.org/software/findutils/
-  - j
+`mauro` can work mostly under /home/mauro. 
 
-- Create you own commands
-  - aliases for Rscript
-  - in files with `#!/usr/bin/env bash`
-- PATH
-- User privileges
-- Links
-- Installing software
+For example, create a `greetme` command:
 
-Use case create terminal commands to run Rscript
-Use case manage your own ~/bin
-Use case manage dotfiles
-Use case work with a server
+```bash
+vim greetme
+echo "Hi ""$USER"
+:wq
 
+bash greetme
+```
+
+You can't execute it as a program.
+
+```bash
+./greetme
+ls -l
+
+# Make it e[x]ecutable
+chmod +x greetme
+
+# You can execute it as a progrem but you must know where it lives
+./greetme
+ls -l
+```
+
+It's best to specify that the command must be run by `bash`
+
+```bash
+which bash
+
+# Add "shebang"
+#! /usr/bin/bash
+```
+
+Make it work from anywhere.
+
+```bash
+mkdir bin
+mv greetme bin
+
+ls
+greetme
+```
+
+Why this works?
+
+```bash
+grep "PATH" ~/.profile
+```
+
+As root (admin)
+
+* Write greet as `echo "Hello""$USER"`
+* Add execute permission: `chmod +x greet`
+* `bash greet`
+* `#! env /usr/bin/bash`
+* `./greet`
+* `export PATH=/new/path/to/command:${PATH}`
+* `greet`
+* Modify PATH permanently to use your commands, maybe at /home/you/bin
+
+### Symbolic permissions
+
+```
+type owner    group user
+```
+```
+-    rwx      rw-   r--
+```
+```
+file read     read  read
+     write    write
+     execute
+```
+
+Reference:
+
+```
+u user
+g group
+o other
+a all
+
++ add
+- remove
+= set
+
+r read
+w write
+x execute
+```
