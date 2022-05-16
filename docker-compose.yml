@@ -2,11 +2,11 @@ version: "3.8"
 services:
   rstudio:
     build: .
-    image: maurolepore/ds_terminal:2
+    image: maurolepore/ds_terminal:4
     ports:
       - 8787:8787
     environment:
-    - PASSWORD=123
+    - PASSWORD=$3cr37
     - ROOT=true
     volumes:
       - .:/home/rstudio/ds.terminal

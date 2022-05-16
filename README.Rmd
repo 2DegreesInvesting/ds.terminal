@@ -85,10 +85,20 @@ Objectives:
 * Move RStudio projects from scattered locations to a single one.
 * Prune your Trash.
 
-### Next (tentative)
+### Permission denied: Understanding users and privileges
 
-* Users and privileges.
-* Writing you own commands.
+This meetup helps you to think about your computer as multi-user system, with at
+least one user and one administrator, but maybe more. It is presented as a use
+case: Login to a server and create a custom `hi` command.
+
+Objectives:
+
+* Login to multi-user system.
+* Get the value of an environment variable.
+* Write a shell script.
+* Make your script executable as a command.
+* List and understand permissions to read, write, and execute.
+* Experience the limits of a user and privileges of an administrator.
 
 ## Resources
 
