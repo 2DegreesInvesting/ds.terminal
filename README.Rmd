@@ -88,8 +88,8 @@ Objectives:
 ### Permission denied: Understanding users and privileges
 
 This meetup helps you to think about your computer as multi-user system, with at
-least one user and one administrator, but maybe more. It is presented as a use
-case: Login to a server and create a custom `hi` command.
+least one user and one administrator, but maybe more. It presents a use case:
+Create a custom `hi` command in a shared RStudio server.
 
 Objectives:
 
