@@ -81,4 +81,5 @@ hi
 * Every system including your laptop can be multi-user system.
 * Users can act mostly under their home directory.
 * Make a bash script-file executable as a command with `chmod +x script-file`. 
-* Place your commands in under a directory in your `$PATH`, e.g. /home/bin.
+* Place your commands under a directory in your `$PATH`, e.g. /home/bin.
+
