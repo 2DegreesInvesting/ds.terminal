@@ -89,11 +89,11 @@ Objectives:
 
 This meetup helps you to think about your computer as multi-user system, with at
 least one user and one administrator, but maybe more. It presents a use case:
-Create a custom `hi` command in a shared RStudio server.
+Create a custom `hi` command in a multi-user RStudio server.
 
 Objectives:
 
-* Login to multi-user system.
+* Login to multi-user RStudio server.
 * Get the value of an environment variable.
 * Write a shell script.
 * Make your script executable as a command.

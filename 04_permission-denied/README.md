@@ -8,11 +8,13 @@ docker-compose up
 
 ### Use case: Create a custom `hi` command in a shared computer
 
-Login
+#### `rstudio` as a user
+
+Login at http://0.0.0.0:8787/
 
 ```
 username: rstudio
-password: $3cr37
+password: s3cr37
 ```
 
 Get the value of relevant environment variables.
@@ -33,9 +35,11 @@ bash --help | head
 vim hi
 echo "Hi $USER"
 :wq
+
+bash hi
 ```
 
-Specify which progam must run the script in the file itself.
+Specify which program must run the script in the file itself.
 
 ```bash
 which bash
@@ -49,17 +53,19 @@ echo "Hi $USER"
 Execute it as a program.
 
 ```bash
+# Fails
 ./hi
-ls -l
+ls -l hi
 
 # Add [+] e[x]ecution privileges
 chmod +x hi
+
 # Compare
-ls -l
+ls -l hi
 
 # Works but annoying
 ./hi
-~/hi
+/home/rstudio/hi
 
 # Fails
 hi
@@ -68,17 +74,22 @@ hi
 Find a suitable location for `hi`.
 
 ```bash
-echo $PATH | grep $USER
-cat ~/.bashrc | grep "PATH"
+# Is the $HOME or the 'rstudio' user in the PATH?
+echo $PATH | grep $HOME
+
+# How is the PATH defined?
 cat ~/.profile | grep "PATH"
 
 mkdir ~/bin
 mv hi ~/bin
 
+# On a new terminal
 hi
 ```
 
-`rstudio` is not only a user but also an administrator of the system.
+#### `rstudio` as an administrator: Acting on behalf of `root`
+
+`rstudio` is not only a user of the system but also an administrator.
 
 ```bash
 # Fails because this task is beyond the scope of rstudio as a user
@@ -89,7 +100,13 @@ sudo adduser jenny
 
 Login as `jenny`.
 
-`jenny` is only a user, not an administrator.
+```bash
+sudo login jenny
+echo $USER
+echo $HOME
+```
+
+`jenny` is only a user of the system but not an administrator.
 
 ```bash
 # Fails
@@ -98,15 +115,15 @@ adduser hadley
 sudo adduser hadley
 ```
 
-`jenny` can run `hi` because anyone can.
+#### Take aways
 
-```bash
-hi
-which hi
-ls -l /home/rstudio/bin/hi
-```
+* Every system including your laptop can be multi-user system.
+* Users can act mostly under their home directory.
+* Administrators can act anywhere.
+* Make a script `abc` executable with `chmod +x abc`. Place it under a directory
+in your `$PATH`.
 
-### Symbolic permissions reference
+#### Symbolic permissions reference
 
 ```
 # Who
