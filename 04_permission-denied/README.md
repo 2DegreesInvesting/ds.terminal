@@ -1,18 +1,17 @@
-### Computing environment
+### Use case: Create a custom `hi` command in a shared computer
 
-Access a terminal in a multi-user system.
+Computing environment
 
 ```bash
 docker-compose up
 ```
 
-### Use case: Create a custom `hi` command in a shared computer
-
 #### `rstudio` as a user
 
-Login at http://0.0.0.0:8787/
+Login
 
 ```
+# http://0.0.0.0:8787/
 username: rstudio
 password: s3cr37
 ```
@@ -25,7 +24,7 @@ echo $HOME
 echo $PATH
 ```
 
-Write a shell script-file (similar to an .R script)
+Write a script-file to run with `bash`.
 
 ```bash
 bash --help | head
@@ -39,20 +38,17 @@ echo "Hi $USER"
 bash hi
 ```
 
-Specify which program must run the script in the file itself.
+Execute it as a program.
 
 ```bash
+# Specify which program must run the script in the file itself.
 which bash
 
 vim hi
 #! /usr/bin/bash
 echo "Hi $USER"
 :wq
-```
 
-Execute it as a program.
-
-```bash
 # Fails
 ./hi
 ls -l hi
@@ -71,10 +67,10 @@ ls -l hi
 hi
 ```
 
-Find a suitable location for `hi`.
+Place `hi` under a directory in your `$PATH`.
 
 ```bash
-# Is the $HOME or the 'rstudio' user in the PATH?
+# Is the $HOME or the user "rstudio" in your $PATH?
 echo $PATH | grep $HOME
 
 # How is the PATH defined?
@@ -92,7 +88,7 @@ hi
 `rstudio` is not only a user of the system but also an administrator.
 
 ```bash
-# Fails because this task is beyond the scope of rstudio as a user
+# Fails. This is beyond the scope of rstudio as a user
 adduser jenny
 # Use administrator privileges
 sudo adduser jenny
@@ -113,6 +109,12 @@ echo $HOME
 adduser hadley
 # Fails too
 sudo adduser hadley
+
+# Fails
+sudo login rstudio
+
+# Works
+exit
 ```
 
 #### Take aways
