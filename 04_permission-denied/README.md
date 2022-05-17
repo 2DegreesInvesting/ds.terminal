@@ -80,6 +80,5 @@ hi
 
 * Every system including your laptop can be multi-user system.
 * Users can act mostly under their home directory.
-* Administrators can act anywhere.
 * Make a script-file `abc` executable as a command with `chmod +x abc`. 
 * Place your customo commands under a directory in your `$PATH`.
