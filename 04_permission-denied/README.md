@@ -1,4 +1,4 @@
-### Use case: Create a custom `hi` command in a shared computer
+### Use case: Create a `hi` command as a user or a multi-user system
 
 Computing environment
 

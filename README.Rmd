@@ -89,16 +89,15 @@ Objectives:
 
 This meetup helps you to think about your computer as multi-user system, with at
 least one user and one administrator, but maybe more. It presents a use case:
-Create a custom `hi` command in a multi-user RStudio server.
+Create a custom `hi` command as a user of a multi-user system.
 
 Objectives:
 
-* Login to multi-user RStudio server.
+* Log in the multi-user system using your username and password.
 * Get the value of an environment variable.
-* Write a shell script.
-* Make your script executable as a command.
-* List and understand permissions to read, write, and execute.
-* Experience the limits of a user and privileges of an administrator.
+* Write and run a bash script.
+* Inspect the permissions of a file.
+* Transform the bash script into an executable command.
 
 ### Next
 
