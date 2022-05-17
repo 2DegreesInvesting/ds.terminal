@@ -100,6 +100,10 @@ Objectives:
 * List and understand permissions to read, write, and execute.
 * Experience the limits of a user and privileges of an administrator.
 
+### Next
+
+* Install software.
+
 ## Resources
 
 * YouTube [playlist](https://bit.ly/ds-incubator-videos).
