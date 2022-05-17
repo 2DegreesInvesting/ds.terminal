@@ -90,7 +90,7 @@ Objectives:
 
 * Log in the multi-user system using your username and password.
 * Get the value of an environment variable.
-* Write and run a bash script.
+* Write and run a bash script-file.
 * Inspect the permissions of a file.
 * Transform the bash script into an executable command.
 
