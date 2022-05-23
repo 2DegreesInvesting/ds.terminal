@@ -1,30 +1,36 @@
-#### `rstudio` as an administrator: Acting on behalf of `root`
+#### Running commands as administrator. Use case: Install [oh-my-zsh](https://ohmyz.sh/)
 
-`rstudio` is not only a user of the system but also an administrator.
+Only administrators can run commands that affect the entire system.
 
-```bash
-# Fails. This is beyond the scope of rstudio as a user
-adduser jenny
-# Use administrator privileges
-sudo adduser jenny
-```
-
-Login as `jenny`.
+Let's try to install a tool that enhances the terminal.
 
 ```bash
-sudo login jenny
-echo $USER
-echo $HOME
+# https://ohmyz.sh/#install
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-`jenny` is only a user of the system but not an administrator.
+In this and other systems you can install a lot of software with `apt-get`.
 
 ```bash
 # Fails
-sudo apt-get update
-logout
+apt-get update 
+apg-get install zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
-login rstudio
+This can only be done by the administrator user "root", or "super users" in the
+group "sudo" who can act on behalf of "root" via the command `sudo`.
+
+```bash
+whoami
+groups
+
+sudo whoami
+```
+
+"rstudio" is in the group "sudo", so can use `sudo` to install software.
+
+```bash
 sudo apt-get update
 sudo apt-get install zsh
 
@@ -32,3 +38,41 @@ sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+Users in the group "sudo" can add users to the system.
+
+```bash
+sudo adduser mauro
+
+login mauro
+
+groups
+
+# Fails
+sudo apt-get update
+
+exit
+```
+
+Users in the group "sudo" can add users to the group "sudo".
+
+```bash
+sudo adduser mauro sudo
+login mauro
+groups
+
+# Works
+sudo apt-get update
+```
+
+### Takeaways
+
+* Administrators can use `sudo` to run system-level commands. Normal users can't.
+* Administrators can crate new administrators.
+* In most servers you can install SOFTWARE with^1:
+
+```bash
+sudo apt-get update
+sudo apt-get install SOFTWARE
+```
+
+^1: Omit `sudo` if you are the "root" user.
