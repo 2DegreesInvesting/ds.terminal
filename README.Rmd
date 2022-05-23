@@ -99,9 +99,18 @@ Objectives:
 * Inspect the permissions of a file.
 * Transform the bash script-file into an executable command.
 
-### Next
+### Running commands as administrator
 
-* Install software.
+This meetup complements the previous one. It shows what administrators can do in
+a system, and how they gain such power. It presents a use case: Install
+[oh-my-zsh](https://ohmyz.sh/) -- a tool that enhances your terminal.
+
+Objectives:
+
+* Understand what are the limits and powers of normal users and administrators.
+* Use `sudo` to run a command as administrator.
+* Use `apt-get` to install software.
+* Understand how normal users become administrators.
 
 ## Resources
 
