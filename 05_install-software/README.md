@@ -38,12 +38,24 @@ sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+Demo of oh-my-zsh
+
+```bash
+git init abc
+cd abc
+alias | grep "branch"
+gcb new
+
+alias | head
+~
+```
+
 Users in the group "sudo" can add users to the system.
 
 ```bash
 sudo adduser mauro
 
-login mauro
+sudo login mauro
 
 groups
 
@@ -57,7 +69,7 @@ Users in the group "sudo" can add users to the group "sudo".
 
 ```bash
 sudo adduser mauro sudo
-login mauro
+sudo login mauro
 groups
 
 # Works
