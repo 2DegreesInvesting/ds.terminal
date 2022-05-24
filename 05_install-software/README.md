@@ -44,7 +44,7 @@ sudo whoami
 
 ```bash
 sudo apt-get update
-sudo apg-get install zsh
+sudo apt-get install zsh
 # https://ohmyz.sh/#install
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
