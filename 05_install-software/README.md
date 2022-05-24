@@ -24,7 +24,8 @@ In this and other systems you can install a lot of software with `apt-get`.
 
 ```bash
 # Fails
-apt-get update && apg-get install zsh
+apt-get update
+apt-get install zsh
 ```
 
 This can only be done by:
@@ -42,7 +43,8 @@ sudo whoami
 "rstudio" is in the group "sudo", so can use `sudo` to install software.
 
 ```bash
-sudo apt-get update && sudo apg-get install zsh
+sudo apt-get update
+sudo apg-get install zsh
 # https://ohmyz.sh/#install
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
@@ -50,7 +52,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 Demo of oh-my-zsh
 
 ```bash
-git init abc && cd abc
+git init abc
+cd abc
 
 gcb new
 
