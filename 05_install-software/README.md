@@ -52,6 +52,10 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 Demo of oh-my-zsh
 
 ```bash
+# Tell Git who I am
+git config --global user.email "maurolepore@gmail.com"
+git config --global user.name "Mauro Lepore"
+
 git init abc
 cd abc
 
